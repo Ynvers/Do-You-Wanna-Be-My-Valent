@@ -1,5 +1,5 @@
 function nextPage() {
-    alert("Yay! ❤️ Happy Valentine's Day!");
+    window.location.href = "yes.html";
 }
 
 function moveButton() {
@@ -10,4 +10,12 @@ function moveButton() {
     noButton.style.position = "absolute";
     noButton.style.left = `${x}px`;
     noButton.style.top = `${y}px`;
+}
+
+const noButton = document.getElementById("noButton");
+
+if ("ontouchstart" in window) {
+    noButton.addEventListener("touchstart", moveButton);
+} else {
+    noButton.addEventListener("mouseover", moveButton);
 }
